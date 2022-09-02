@@ -1,0 +1,51 @@
+OP Codes:
+0000 = NOOP 0 0 0 				0000
+0001 = MOV (Register) 0 (Register)		0001
+0010 = IMM (Value) 0 (Register)			0002
+0011 = PSH (Register) 0 0			0003
+0100 = POP 0 0 (Register)			0004
+0101 = RES (Register) 0 0 			0005
+0110 = ADD (Register) (Register) (Register)	0006
+0111 = SUB (Register) (Register) (Register)	0007
+0110 = MUL (Register) (Register) (Register)	0006
+0111 = DIV (Register) (Register) (Register)	0007
+1000 = AND (Register) (Register) (Register)	0008
+1001 = OR (Register) (Register) (Register)	0009
+1010 = NAND (Register) (Register) (Register)	000a
+1011 = NOR (Register) (Register) (Register)	000b
+1100 = XOR (Register) (Register) (Register)	000c
+1101 = XNOR (Register) (Register) (Register)	000d
+1110 = NOT (Register) 0 (Register)		000e
+1111 = SHR (Register) 0 (Register)		000f
+0000 = SHL (Register) 0 (Register)		0010
+0001 = IGT (Register) (Register) (Address)	0011
+0010 = IEQ (Register) (Register) (Address) 	0012
+0011 = INEQ (Register) (Register) (Address) 	0013
+0100 = ILT (Register) (Register) (Address)	0014
+0101 = ADDi (Register) (Value) (Address)	0015
+0110 = SUBi (Register) (Value) (Address) 	0016
+0111 = IGTi (Register) (Value) (Address)	0017
+1000 = IEQi (Register) (Value) (Address) 	0018
+1001 = INEQi = (Register) (Register) (Address)	0019
+1010 = ILTi (Register) (Value) (Address)	001a
+1011 = JMP 0 0 (Address) 			001b
+
+
+Registers:
+0000 = Reg 0
+0001 = Reg 1
+0010 = Reg 2
+0101 = Reg 3
+0010 = Reg 4
+0101 = Reg 5
+0110 = Reg 6
+0111 = IP/OP
+
+Chars:
+A B C D E F G H I J K L M N O P Q R S T U V W X Y Z 1 2 3 4 5 6 7 8 9 0 s |  38 
+
+
+
+
+
+NEED NOOP AFTER PUSH AND POP
