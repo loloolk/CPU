@@ -32,3 +32,15 @@ In "code.alt" put in your code, and run it. it will give you the nesessary input
 26) INEQi [Reg] [Val] [Val]: ^ is not equal to ^
 27) ILTi [Reg] [Val] [Val]: ^ is less than ^
 28) JMP [Val]: Immediately jumps to the address in the program. NOTE: Value is in hex.
+
+REGISTERS:
+R0: Register 0
+R1: Register 1
+R2: Register 2
+R3: Register 3
+R4: Register 4
+R5: Register 5
+R6: Register 6
+IP: Input NOTE: Do not use as second condition.
+OU: Output NOTE: Do not use as first condition.
+DIS: Display screen (RGB 565 format)
