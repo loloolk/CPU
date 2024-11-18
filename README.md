@@ -1,7 +1,19 @@
 # CPU
-A 16-bit CPU, made with logisim evolution, and a (badly made) program that converts the .alt file from sudo assembly  (pretty understandable if you read the code) int the nessecary inputs for the CPU.
 
-INSTRUCTIONS (for c++ file)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+
+## Description:
+A 16-bit CPU, made with logisim evolution, and a program that converts the .alt file from sudo assembly  (pretty understandable if you read the code) into the nessecary inputs for the simulated CPU.
+
+## Quick Start:
+1) Download [logisim evolution](https://sourceforge.net/projects/logisimevolution/)
+2) Open `CPU.circ` in logisim evolution
+3) Open `code.alt` and put in your code
+4) Run the program
+5) Copy the output into the ROM chips
+6) Run the CPU
+
+## INSTRUCTIONS (for c++ file):
 In "code.alt" put in your code, and run it. it will give you the nesessary inputs for the 4 ROM chips.
 1) NOOP: No operation, nothing happens.
 2) MOV [Reg] [Reg]: Moves the values in the first register, to the second register.
@@ -44,3 +56,6 @@ REGISTERS:
 8) IP: Input NOTE: Do not use as second condition.
 9) OU: Output NOTE: Do not use as first condition.
 10) DIS: Display screen (RGB 565 format)
+
+## License
+This project is licensed under the [MIT License](LICENSE).
