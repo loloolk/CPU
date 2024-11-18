@@ -3,18 +3,20 @@
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 ## Description:
-A 16-bit CPU, made with logisim evolution, and a program that converts the .alt file from sudo assembly  (pretty understandable if you read the code) into the nessecary inputs for the simulated CPU.
+A 16-bit CPU, made with logisim evolution. This contains the CPU's Circuitry in `CPU`, an assembler for the CPU (from assembly to machine code) in `Assembler` and a Virtual Machine for the CPU in `VM`.
 
-## Quick Start:
+## Quick Start (CPU Simulation):
 1) Download [logisim evolution](https://sourceforge.net/projects/logisimevolution/)
-2) Open `CPU.circ` in logisim evolution
-3) Open `code.alt` and put in your code
-4) Run the program
-5) Copy the output into the ROM chips
+2) Open `CPU/CPU.circ` in logisim evolution
+3) Open `Assembler/input.txt` and put in your code
+4) Run the `Assembler/main.c` file
+5) Copy the `Assembler/outut.txt` into the ROM chips
 6) Run the CPU
 
-## INSTRUCTIONS (for c++ file):
-In "code.alt" put in your code, and run it. it will give you the nesessary inputs for the 4 ROM chips.
+## ASSEMBLER INSTRUCTIONS:
+The Program currently made calculates the first few fibonacci numbers, and prints them out.
+
+In `Assembler/input.txt` put in your code, and run it. it will give you the nesessary inputs for the 4 ROM chips.
 1) NOOP: No operation, nothing happens.
 2) MOV [Reg] [Reg]: Moves the values in the first register, to the second register.
 3) IMM [Val] [Reg]: Moves the value immediately into the designated register.
@@ -45,17 +47,14 @@ In "code.alt" put in your code, and run it. it will give you the nesessary input
 27) ILTi [Reg] [Val] [Val]: ^ is less than ^
 28) JMP [Val]: Immediately jumps to the address in the program. NOTE: Value is in hex.
 
-REGISTERS:
-1) R0: Register 0
-2) R1: Register 1
-3) R2: Register 2
-4) R3: Register 3
-5) R4: Register 4
-6) R5: Register 5
-7) R6: Register 6
-8) IP: Input NOTE: Do not use as second condition.
-9) OU: Output NOTE: Do not use as first condition.
-10) DIS: Display screen (RGB 565 format)
+29) DBG: Additional command for debugging purposes. Will print out the values of the registers if running in VM. Do not use for CPU simulation.
+30) EXIT: Additional command for debugging purposes. Will exit the program if running in VM. Do not use for CPU simulation.
+
+## VM INSTRUCTIONS:
+The Program currently compiled calculates the first few fibonacci numbers, and prints them out.
+1) In `VM/ROM.txt` put in your code in machine code (from the assembler)
+2) Run the `VM/main.c` file
+NOTE: There is no GUI for the VM, so using the display screen will not work.
 
 ## License
 This project is licensed under the [MIT License](LICENSE).
